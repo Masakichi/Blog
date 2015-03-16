@@ -2,8 +2,10 @@ Title: About
 
 My name is Gimo.
 
-Life is short, use Python.
+Find me: [@Douban](http://douban.com/people/62970444), [@V2EX](http://v2ex.com/member/jyjmrlk), [@Zhihu](http://zhihu.com/people/masakichi)
 
-Find me: [@V2EX](http://v2ex.com/member/jyjmrlk),[@Douban](http://douban.com/people/62970444),[@Zhihu](http://zhihu.com/people/masakichi)
+Douban Show:
+<script type="text/javascript" src="http://www.douban.com/service/badge/masakichi/?selection=latest&amp;picsize=small&amp;hideself=on&amp;show=collection&amp;n=20&amp;hidelogo=on&amp;cat=movie%7Cbook%7Cmusic&amp;columns=10"></script>
 
-Contact me: [self@gimo.me](mailto:self@gimo.me)
+
+
