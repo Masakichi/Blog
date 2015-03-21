@@ -8,7 +8,7 @@ SITEURL = 'http://gimo.me'
 
 TIMEZONE = 'Asia/Shanghai'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = u'cn'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = 'feeds/all.rss.xml'
@@ -57,3 +57,7 @@ SOCIAL_SIDEBAR_TOP = (
 # code block with line numbers
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
+
+# date format
+DATE_FORMATS = {
+        'cn': '%Y-%m-%d'}
