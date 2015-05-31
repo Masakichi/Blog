@@ -41,7 +41,7 @@ PLUGIN_PATHS = ['/Users/Gimo/Dropbox/Github/pelican-plugins']
 PLUGINS = ['sitemap']
 SITEMAP = {
     'format': 'xml'}
-SITESEARCH = 'http://google.com/search'
+SITESEARCH = '//google.com/search'
 #GOOGLE_ANALYTICS = 'UA-50840195-1'
 
 GITHUB_USER = "masakichi"

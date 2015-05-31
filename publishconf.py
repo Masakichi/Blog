@@ -13,8 +13,9 @@ from pelicanconf import *
 SITEURL = 'http://gimo.me'
 RELATIVE_URLS = True
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+FEED_ALL_ATOM = 'feeds/all.rss.xml'
+CATEGORY_FEED_ATOM = 'feeds/%s.rss.xml'
+TRANSLATION_FEED_ATOM = None
 
 DELETE_OUTPUT_DIRECTORY = True
 
