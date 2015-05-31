@@ -12,10 +12,10 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
-SSH_HOST=localhost
+SSH_HOST=sg.gimo.me
 SSH_PORT=22
 SSH_USER=root
-SSH_TARGET_DIR=/var/www
+SSH_TARGET_DIR=/usr/share/nginx/html
 
 S3_BUCKET=my_s3_bucket
 
@@ -48,6 +48,7 @@ help:
 	@echo '   make s3_upload                   upload the web site via S3         '
 	@echo '   make cf_upload                   upload the web site via Cloud Files'
 	@echo '   make github                      upload the web site via gh-pages   '
+	@echo '   make deploy                      deploy the web site both DO&GitHub '
 	@echo '                                                                       '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html'
 	@echo '                                                                       '
@@ -101,8 +102,17 @@ s3_upload: publish
 cf_upload: publish
 	cd $(OUTPUTDIR) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .
 
+# github: publish
+# 	ghp-import $(OUTPUTDIR)
+# 	git push origin gh-pages
+
 github: publish
-	ghp-import $(OUTPUTDIR)
-	git push origin gh-pages
+	cd $(OUTPUTDIR)
+	git push origin master
+
+deploy: publish
+	cd $(OUTPUTDIR)
+	git push origin master
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvz --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
