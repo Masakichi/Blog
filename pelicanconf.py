@@ -61,3 +61,9 @@ RELATIVE_URLS = True
 # date format
 DATE_FORMATS = {
         'cn': '%Y-%m-%d'}
+
+# favicon
+STATIC_PATHS = ['images', 'extra/favicon.ico']
+EXTRA_PATH_METADATA = {
+        'extra/favicon.ico': {'path': 'favicon.ico'}
+        }
