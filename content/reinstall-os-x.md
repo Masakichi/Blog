@@ -42,7 +42,7 @@ Slug: reinstall-os-x
         - pycharm
 - 一些软件的配置
     - 对于macvim
-        - 安装参数：`brew install macvim --with-cscope --with-lua --HEAD`
+        - 安装参数：`brew install macvim --override-system-vim --with-cscope --with-lua --HEAD`
         - .vimrc：[https://github.com/Masakichi/dotfiles](https://github.com/Masakichi/dotfiles)
     - 对于zsh
         - 安装[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
