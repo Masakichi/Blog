@@ -53,5 +53,7 @@ Slug: reinstall-os-x
     - 对于iTerm2
         - 下载colorscheme：[https://github.com/mbadolato/iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
 
+- 安装 ntfs-3g 读写 ntfs 格式磁盘。详见：`https://gist.github.com/bjorgvino/f24e5c079b92f921b765`
+
 ## 截图
 ![yosemite-desktop]({filename}/images/yosemite-desktop.png)
